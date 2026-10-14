@@ -1,0 +1,49 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar filmes — CineLog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="logo">Cine<span>Log</span></a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="explorar.html" class="ativo">Explorar</a>
+            <a href="lista.html">Minha lista</a>
+            <a href="comunidade.html">Comunidade</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+    </header>
+
+    <main class="secao">
+        <p class="subtitulo">DESCUBRA SEU PRÓXIMO FILME</p>
+        <h1 class="titulo-pagina">Explorar filmes</h1>
+        <p class="texto-secundario">Pesquise pelo título e adicione filmes à sua lista.</p>
+
+        <div class="barra-pesquisa">
+            <span aria-hidden="true">⌕</span>
+            <input
+                type="search"
+                id="pesquisaFilmes"
+                placeholder="Buscar por nome do filme..."
+                aria-label="Buscar filmes pelo título"
+            >
+        </div>
+
+        <p id="resultadoPesquisa" class="texto-secundario" aria-live="polite"></p>
+        <div id="listaFilmes" class="lista-filmes"></div>
+
+        
+    </main>
+
+    <footer>
+        <p>© 2026 CineLog — Feito por amantes do cinema.</p>
+    </footer>
+</body>
+</html>
+```

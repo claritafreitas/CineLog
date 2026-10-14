@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil — CineLog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="perfil.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="logo">Cine<span>Log</span></a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="explorar.html">Explorar</a>
+            <a href="lista.html">Minha lista</a>
+            <a href="comunidade.html">Comunidade</a>
+            <a href="perfil.html" class="ativo">Perfil</a>
+        </nav>
+    </header>
+
+    <main class="secao">
+        <p class="subtitulo">SEU ESPAÇO NO CINELOG</p>
+        <h1 class="titulo-pagina">Meu perfil</h1>
+
+        <section class="painel-perfil perfil-principal">
+            <div class="avatar avatar-grande" id="avatarPerfil">C</div>
+
+            <div class="dados-perfil">
+                <h2 id="nomeExibido">Cinéfilo</h2>
+                <p class="usuario" id="usuarioExibido">@cinefilo</p>
+                <p class="texto-secundario" id="bioExibida">
+                    Seu espaço para registrar sua jornada pelo cinema.
+                </p>
+                <button type="button" id="botaoEditar">Editar perfil</button>
+            </div>
+        </section>
+
+        <section class="painel-perfil" id="areaEdicao" hidden>
+            <h2>Editar informações</h2>
+
+            <form id="formPerfil">
+                <label for="nome">Nome de exibição</label>
+                <input type="text" id="nome" maxlength="40" required>
+
+                <label for="usuario">Nome de usuário</label>
+                <input type="text" id="usuario" maxlength="20"
+                       pattern="[A-Za-z0-9_.]+"
+                       title="Use letras, números, ponto ou underline"
+                       required>
+
+                <label for="bio">Biografia</label>
+                <textarea id="bio" rows="4" maxlength="180"
+                          placeholder="Conte um pouco sobre você e seus filmes favoritos"></textarea>
+
+                <label for="avatarInicial">Inicial do avatar</label>
+                <input type="text" id="avatarInicial" maxlength="2"
+                       placeholder="Ex.: C">
+
+                <div class="botoes-perfil">
+                    <button type="submit">Salvar alterações</button>
+                    <button type="button" id="botaoCancelar">Cancelar</button>
+                </div>
+
+                <p id="mensagemPerfil" role="status"></p>
+            </form>
+        </section>
+
+        <section class="painel-perfil">
+            <h2>Sobre você</h2>
+            <p class="texto-secundario">
+                Este é o seu espaço pessoal para compartilhar seu gosto
+                pelo cinema e acompanhar sua atividade no CineLog.
+            </p>
+        </section>
+
+        <section class="painel-perfil">
+            <h2>❤️ Filmes curtidos</h2>
+            <div id="listaCurtidos"></div>
+</section>
+
+        
+        <section class="painel-perfil">
+            <h2>Suas avaliações</h2>
+            <p class="texto-secundario">
+                 Confira os filmes que você avaliou e suas opiniões.
+            </p>
+                <div id="listaAvaliacoes"></div>
+</section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CineLog — Feito por amantes do cinema.</p>
+    </footer>
+</body>
+</html>
